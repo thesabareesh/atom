@@ -179,7 +179,7 @@ describe('PanelContainerElement', () => {
       }
 
       it("focuses the first tabbable item if available", () => {
-        const panel = createPanel();
+        const panel = createPanel()
 
         const panelEl = panel.getElement()
         const inputEl = document.createElement('input')
@@ -191,7 +191,7 @@ describe('PanelContainerElement', () => {
       })
 
       it("focuses the entire panel item when no tabbable item is available and the panel is focusable", () => {
-        const panel = createPanel();
+        const panel = createPanel()
         const panelEl = panel.getElement()
 
         spyOn(panelEl, 'focus')
@@ -200,7 +200,7 @@ describe('PanelContainerElement', () => {
       })
 
       it("returns focus to the original activeElement", () => {
-        const panel = createPanel();
+        const panel = createPanel()
         const previousActiveElement = document.activeElement
         const panelEl = panel.getElement()
         panelEl.appendChild(document.createElement('input'))
